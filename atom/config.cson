@@ -1,0 +1,26 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    disabledPackages: [
+      "remote-edit"
+      "seti-icons"
+      "linter-rubocop"
+      "linter"
+    ]
+    projectHome: "/Users/rppassis/Dropbox/Freshmob/Clients"
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "monokai-seti"
+    ]
+  editor:
+    showInvisibles: true
+  "exception-reporting":
+    userId: "22c0a430-b62f-4f5d-ba15-c8db634b637c"
+  "linter-rubocop":
+    "executable-path": "/Users/rppassis/.rbenv/versions/2.2.3/bin/rubocop"
+  "todo-show": {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
