@@ -1,0 +1,20 @@
+{
+    "profiles": [
+        {
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": {
+                "f1": "mute",
+                "f2": "volume_down",
+                "f3": "volume_up",
+                "f5": "vk_consumer_play",
+                "f7": "vk_consumer_previous",
+                "f8": "vk_consumer_next",
+                "f12": "power",
+                "right_command": "left_option",
+                "left_option": "left_command",
+                "right_option": "right_command"
+            }
+        }
+    ]
+}

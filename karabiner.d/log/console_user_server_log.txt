@@ -1,0 +1,74 @@
+[2016-09-22 09:21:46.581] [console_user_server] [info] version 0.90.36
+[2016-09-22 09:21:47.765] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 09:21:47.766] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 09:21:48.820] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 09:37:57.581] [console_user_server] [info] version 0.90.36
+[2016-09-22 09:37:58.885] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 09:37:58.926] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 09:37:59.981] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 09:38:19.568] [console_user_server] [info] version 0.90.36
+[2016-09-22 09:38:20.638] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 09:38:20.638] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 09:38:21.683] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 09:39:24.796] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 09:39:35.577] [console_user_server] [info] version 0.90.36
+[2016-09-22 09:39:36.828] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 09:39:36.829] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 09:39:37.834] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 13:22:35.015] [console_user_server] [info] version 0.90.36
+[2016-09-22 13:22:36.814] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 13:22:36.936] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 13:22:38.008] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 14:26:11.730] [console_user_server] [info] version 0.90.36
+[2016-09-22 14:26:14.371] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 14:26:14.376] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 14:26:15.442] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 14:55:09.587] [console_user_server] [info] version 0.90.36
+[2016-09-22 14:55:15.337] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 14:55:15.462] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 14:55:16.356] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:12:04.884] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:12:06.255] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:12:06.258] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:12:07.308] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:20:19.546] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:20:19.546] [console_user_server] [warning] unknown key_code:kHIDUsage_KeyboardF1 in /Users/rppassis/.karabiner.d/configuration/karabiner.json
+[2016-09-22 20:21:11.169] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:21:21.439] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:21:22.513] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:21:22.514] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:21:23.577] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:22:41.922] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected '<'; expected end of input
+[2016-09-22 20:23:55.727] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected '<'; expected end of input
+[2016-09-22 20:24:26.511] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected '<'; expected end of input
+[2016-09-22 20:24:46.388] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected string literal; expected '}'
+[2016-09-22 20:25:06.187] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected string literal; expected '}'
+[2016-09-22 20:25:17.703] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:25:18.787] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:25:18.787] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected string literal; expected '}'
+[2016-09-22 20:25:18.787] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:25:19.790] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:25:30.962] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected '<'; expected end of input
+[2016-09-22 20:25:57.830] [console_user_server] [warning] parse error in /Users/rppassis/.karabiner.d/configuration/karabiner.json: parse error - unexpected '}'; expected string literal
+[2016-09-22 20:26:05.275] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:26:05.275] [console_user_server] [warning] unknown key_code:volume_mute in /Users/rppassis/.karabiner.d/configuration/karabiner.json
+[2016-09-22 20:26:33.844] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:40:32.313] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:40:34.190] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:40:34.192] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:40:35.192] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:52:37.138] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:52:39.485] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:52:39.487] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:52:39.488] [console_user_server] [warning] unknown key_code:power_a in /Users/rppassis/.karabiner.d/configuration/karabiner.json
+[2016-09-22 20:52:40.556] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:52:57.084] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:52:58.125] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:52:58.126] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:52:58.126] [console_user_server] [warning] unknown key_code:power_a in /Users/rppassis/.karabiner.d/configuration/karabiner.json
+[2016-09-22 20:52:59.194] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 20:53:15.247] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:56:24.128] [console_user_server] [info] version 0.90.36
+[2016-09-22 20:56:25.199] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 20:56:25.200] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 20:56:26.269] [console_user_server] [info] system_preferences::values is updated.
