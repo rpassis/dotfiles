@@ -30,6 +30,7 @@ apps=(
   carthage
   tmux
   s3cmd
+  mogenerator
   node
   npm
   rcm

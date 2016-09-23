@@ -9,6 +9,7 @@ windows:
         - sleep 5 && docker-compose exec api bash
         - docker-compose up
         - tail -f log/development.log
+        - cx ssh -s "Bloodstock AWS" -e prod Flamingo
   - ios:
       root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_ios
       layout: main-horizontal

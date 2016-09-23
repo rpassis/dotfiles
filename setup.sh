@@ -42,6 +42,9 @@ mkdir $XCODE_THEMES_DIR
 cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
 cp "$DOTFILES_DIR/xcode/theme/Inconsolata.otf" "/Library/Fonts/"
 
+# Install C66 toolbelt
+curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_install.sh | bash
+
 . "rcup"
 # Manually link atom folder as rcup takes forever due to number of files that may be here
 ln -s "$DOTFILES_DIR/atom" "$HOME/.atom"
