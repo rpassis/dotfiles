@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Brew-cask installation tasks starting"
+
 # Install Caskroom
 brew tap caskroom/cask
 brew install brew-cask
@@ -10,31 +12,36 @@ apps=(
     1password
     flux
     dash
+    docker
     iterm2
-    atom
-    webstorm
+    atom-beta
+    charles
     firefox
     firefoxnightly
     google-chrome
     google-chrome-canary
-    malwarebytes-anti-malware
     glimmerblocker
     hammerspoon
     kaleidoscope
     macdown
-    opera
+    paw
     screenflow
+    simpholders
+    sketch
+    sonos
     spotify
-    skype
     slack
     tower
     gitbox
     transmit
     elmedia-player
     utorrent
+    valentina-studio
 )
 
 brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-csv betterzipql qlimagesize suspicious-package provisioning
+
+echo "Brew-cask installation tasks finished"

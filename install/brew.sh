@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Installs Homebrew and some of the common dependencies needed/desired for software development
+echo "Brew installation tasks starting"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -14,7 +15,6 @@ fi
 
 brew tap homebrew/versions
 brew tap homebrew/dupes
-brew tap Goles/battery
 brew tap thoughtbot/formulae
 
 # Make sure we’re using the latest Homebrew
@@ -42,3 +42,5 @@ brew install "${apps[@]}"
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+echo "Brew installation tasks finished"

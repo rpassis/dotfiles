@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE"
+EXCLUDES="README.md LICENSE setup.sh xcode install atom"
 DOTFILES_DIRS="$HOME/dotfiles-local $HOME/dotfiles"

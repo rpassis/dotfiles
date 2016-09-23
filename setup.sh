@@ -3,7 +3,8 @@
 # Get the dotfiles directory's absolute path
 SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd -P)"
 DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
-
+XCODE_THEMES_DIR="~/Library/Developer/Xcode/UserData/FontAndColorThemes"
+RCRC=$HOME/dotfiles/rcrc
 RUBY_VERSION=2.3.1
 
 # Check if zsh is present
@@ -22,6 +23,9 @@ else
   exit
 fi
 
+export DOTFILES_DIR
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Package managers & packages
 
 . "$DOTFILES_DIR/install/brew.sh"
@@ -32,5 +36,14 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 . "$DOTFILES_DIR/install/gem.sh"
+
+# Basic Xcode setup
+mkdir $XCODE_THEMES_DIR
+cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
+cp "$DOTFILES_DIR/xcode/theme/Inconsolata.otf" "/Library/Fonts/"
+
+. "rcup"
+# Manually link atom folder as rcup takes forever due to number of files that may be here
+ln -s "$DOTFILES_DIR/atom" "$HOME/.atom"
 
 echo "All done"

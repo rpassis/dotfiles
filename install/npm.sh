@@ -1,5 +1,4 @@
 #!/bin/sh
-
 #
 # This script configures my Node.js development setup. Note that
 # nvm is installed by the Homebrew install script.
@@ -12,6 +11,8 @@
 #
 #     ./node_modules/.bin/webpack --config webpack.local.config.js
 #
+
+echo "NPM installation tasks starting"
 
 if test ! $(which nvm)
 then
@@ -55,3 +56,5 @@ packages=(
 )
 
 npm install -g "${packages[@]}"
+
+echo "NPM installation tasks finished"

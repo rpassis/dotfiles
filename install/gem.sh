@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Installs Homebrew and some of the common dependencies needed/desired for software development
+echo "Gem installation tasks starting"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -11,9 +11,11 @@ rbenv global ${RUBY_VERSION}
 
 # Install essential gems
 gems=(
-  cocoapods,
-  fastlane,
+  cocoapods
+  fastlane
   tmuxinator
 )
 
 gem install "${gems[@]}"
+
+echo "Gem installation tasks finished"
