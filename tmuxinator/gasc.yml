@@ -1,0 +1,23 @@
+name: gasc
+root: ~/Dropbox/Freshmob/Clients/Gascoyne/Dev
+
+windows:
+  - docker:
+      root: ~/Dropbox/Freshmob/Clients/Gascoyne/Dev/gascoyne_server
+      layout: main-horizontal
+      panes:
+        - sleep 5 && docker exec -it gascoyne_db psql -U postgres
+        - docker-compose up
+  - api:
+      root: ~/Dropbox/Freshmob/Clients/Gascoyne/Dev/gascoyne_server
+      layout: main-horizontal
+      panes:
+        - atom-beta .
+        - sleep 5 && docker exec -it gascoyne_api rails console
+        - tail -f log/development.log
+  - ios:
+      root: ~/Dropbox/Freshmob/Clients/Gascoyne/Dev/gascoyne
+      layout: main-horizontal
+      panes:
+        - #empty
+        - #empty

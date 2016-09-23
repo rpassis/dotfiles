@@ -1,0 +1,17 @@
+name: arrowfield
+root: ~/Documents/Freshmob/Clients/Arrowfield/Dev
+
+windows:
+  - api:
+      root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_server
+      layout: main-horizontal
+      panes:
+        - sleep 5 && docker-compose exec api bash
+        - docker-compose up
+        - tail -f log/development.log
+  - ios:
+      root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_ios
+      layout: main-horizontal
+      panes:
+        - #empty
+        - #empty

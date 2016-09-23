@@ -72,3 +72,19 @@
 [2016-09-22 20:56:25.199] [console_user_server] [info] grabber_client_ is connected
 [2016-09-22 20:56:25.200] [console_user_server] [info] configuration_core_ was loaded.
 [2016-09-22 20:56:26.269] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-22 21:34:31.662] [console_user_server] [info] version 0.90.36
+[2016-09-22 21:34:33.743] [console_user_server] [info] grabber_client_ is connected
+[2016-09-22 21:34:33.911] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-22 21:34:34.815] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-23 00:03:16.710] [console_user_server] [info] version 0.90.36
+[2016-09-23 00:03:18.763] [console_user_server] [info] grabber_client_ is connected
+[2016-09-23 00:03:19.089] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-23 00:03:19.806] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-23 00:03:55.043] [console_user_server] [info] version 0.90.37
+[2016-09-23 00:03:56.230] [console_user_server] [info] grabber_client_ is connected
+[2016-09-23 00:03:56.232] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-23 00:03:57.254] [console_user_server] [info] system_preferences::values is updated.
+[2016-09-23 08:33:06.702] [console_user_server] [info] version 0.90.37
+[2016-09-23 08:33:08.882] [console_user_server] [info] grabber_client_ is connected
+[2016-09-23 08:33:08.888] [console_user_server] [info] configuration_core_ was loaded.
+[2016-09-23 08:33:09.954] [console_user_server] [info] system_preferences::values is updated.

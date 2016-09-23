@@ -1,0 +1,60 @@
+# ~/.tmuxinator/vamp_api.yml
+
+name: vamp
+root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t vamp_api
+
+windows:
+  - docker:
+      root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev/vamp
+      panes:
+        - docker-compose up
+        - sleep 5 && docker exec -it vamp_db psql -U postgres
+  - api_phoenix:
+      root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev/vamp/api_phoenix
+      panes:
+        - sleep 5 && docker exec -it vamp_api_phoenix bash
+        - #
+  - api:
+      root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev/vamp/api
+      layout: 0ffc,364x76,0,0[364x24,0,0,0,364x51,0,25{120x51,0,25,2,120x51,121,25,3,122x51,242,25[122x25,242,25,4,122x25,242,51,8]}]
+      panes:
+        - sleep 5 && docker exec -it vamp_api rails console
+        - #empty
+        - tail -f log/development.log
+  - heart:
+      root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev/vamp/heart
+      layout: b020,364x76,0,0[364x24,0,0,1,364x51,0,25{120x51,0,25,6,120x51,121,25,7,122x51,242,25[122x25,242,25,8,122x25,242,51,9]}]
+      panes:
+        - sleep 5 && docker exec -it vamp_heart rails console
+        - #empty
+        - tail -f log/development.log
+  - ios:
+      root: ~/Documents/Freshmob/Clients/VisualAmplifiers/Dev/vamp/ios
+      layout: main-horizontal
+      panes:
+        - #empty
+        - #empty
