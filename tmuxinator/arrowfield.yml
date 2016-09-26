@@ -7,7 +7,7 @@ windows:
       layout: main-horizontal
       panes:
         - sleep 5 && docker-compose exec api bash
-        - docker-compose up
+        - atom-beta . && docker-compose up
         - tail -f log/development.log
         - cx ssh -s "Bloodstock AWS" -e prod Flamingo
   - ios:

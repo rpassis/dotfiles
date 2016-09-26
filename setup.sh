@@ -37,16 +37,21 @@ fi
 
 . "$DOTFILES_DIR/install/gem.sh"
 
-# Basic Xcode setup
-mkdir $XCODE_THEMES_DIR
-cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
-cp "$DOTFILES_DIR/xcode/theme/Inconsolata.otf" "/Library/Fonts/"
-
 # Install C66 toolbelt
 curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_install.sh | bash
 
-. "rcup"
-# Manually link atom folder as rcup takes forever due to number of files that may be here
+# Install fonts
+git clone https://github.com/rpassis/fonts.git && cd fonts && ./install.sh
+cd ../ && rm -rf fonts
+
+# Basic Xcode setup
+mkdir $XCODE_THEMES_DIR
+cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
+
+# Symlink dotfiles
+."rcup"
+
+# Manually symlink atom folder as rcup takes forever due to number of files that may be here
 ln -s "$DOTFILES_DIR/atom" "$HOME/.atom"
 
 echo "All done"
