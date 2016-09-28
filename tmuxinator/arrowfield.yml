@@ -7,9 +7,9 @@ windows:
       layout: main-horizontal
       panes:
         - sleep 5 && docker-compose exec api bash
-        - atom-beta . && docker-compose up
+        - atom-beta . && sleep 1 && hideapp "Atom Beta" && docker-compose up
         - tail -f log/development.log
-        - cx ssh -s "Bloodstock AWS" -e prod Flamingo
+        - cx ssh -s "Bloodstock AWS" -e dev Giraffe
   - ios:
       root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_ios
       layout: main-horizontal
