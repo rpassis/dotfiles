@@ -48,8 +48,11 @@ cd ../ && rm -rf fonts
 mkdir $XCODE_THEMES_DIR
 cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
 
-# Symlink dotfiles
-."rcup"
+# Terminal preferences
+cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist" "~/Library/Preferences/" && defaults read com.apple.Terminal
+
+# Symlink dotfiles (check file named rcrc to see excluded symlinked files)
+. "rcup"
 
 # Manually symlink atom folder as rcup takes forever due to number of files that may be here
 ln -s "$DOTFILES_DIR/atom" "$HOME/.atom"

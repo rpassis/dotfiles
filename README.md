@@ -1,19 +1,13 @@
-thoughtbot dotfiles
-===================
+freshmob bootstrap (forked from thoughbot/dotfiles)
+==================================================
 
 ![prompt](http://images.thoughtbot.com/thoughtbot-dotfiles-prompt.png)
 
-Requirements
-------------
-
-Set zsh as your login shell:
-
-    chsh -s $(which zsh)
 
 Install
 -------
 
-Clone onto your laptop:
+Clone onto your computer:
 
     git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
 
@@ -22,8 +16,8 @@ updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
-    brew tap thoughtbot/formulae
-    brew install rcm
+    cd dotfiles
+    ./setup.sh
 
 Install the dotfiles:
 

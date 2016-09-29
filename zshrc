@@ -39,6 +39,9 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+# load direnv
+eval "$(direnv hook zsh)"
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
