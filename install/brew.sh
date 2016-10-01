@@ -26,6 +26,7 @@ brew upgrade --all
 apps=(
   awscli
   nvm
+  hub
   direnv
   git
   rbenv

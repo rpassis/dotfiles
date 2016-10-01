@@ -15,6 +15,7 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+  pager = "less -iXFR"
 [merge]
   ff = only
 [commit]

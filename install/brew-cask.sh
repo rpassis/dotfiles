@@ -37,6 +37,7 @@ apps=(
     elmedia-player
     utorrent
     valentina-studio
+    visual-studio-code
 )
 
 brew cask install "${apps[@]}"
