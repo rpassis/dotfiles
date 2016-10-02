@@ -54,7 +54,4 @@ cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist" "~/Library/Preferences/" &&
 # Symlink dotfiles (check file named rcrc to see excluded symlinked files)
 . "rcup"
 
-# Manually symlink atom folder as rcup takes forever due to number of files that may be here
-ln -s "$DOTFILES_DIR/atom" "$HOME/.atom"
-
 echo "All done"
