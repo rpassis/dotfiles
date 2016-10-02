@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="vscode-elixir" Version="0.0.8" Publisher="mjmcloug"/>
+    <DisplayName>vscode-elixir</DisplayName>
+    <Description xml:space="preserve">Elixir support for VSCode</Description>
+    <Tags>Elixir,syntax,snippet,elixir,__ext_.ex,__ext_.exs,Eex,eex,__ext_.eex,HTML (Eex),__ext_.html.eex</Tags>
+    <Categories>Languages</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      
+      
+      
+      
+      
+    </Properties>
+    
+    <Icon>extension/images/logo.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/images/logo.png" Addressable="true" />
+  </Assets>
+</PackageManifest>

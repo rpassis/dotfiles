@@ -6,8 +6,8 @@ windows:
       root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_server
       layout: main-horizontal
       panes:
+        - docker-compose up -d && code .
         - sleep 5 && docker-compose exec api bash
-        - atom-beta . && sleep 1 && hideapp "Atom Beta" && docker-compose up
         - tail -f log/development.log
         - cx ssh -s "Bloodstock AWS" -e dev Giraffe
   - ios:
