@@ -6,13 +6,6 @@ echo "Brew installation tasks starting"
 # Ask for the administrator password upfront
 sudo -v
 
-# Check for Homebrew and install it if missing
-if test ! $(which brew)
-then
-  echo "Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 brew tap homebrew/versions
 brew tap homebrew/dupes
 brew tap thoughtbot/formulae

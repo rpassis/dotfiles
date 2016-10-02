@@ -7,6 +7,13 @@ XCODE_THEMES_DIR="~/Library/Developer/Xcode/UserData/FontAndColorThemes"
 RCRC=$HOME/dotfiles/rcrc
 RUBY_VERSION=2.3.1
 
+# Check for Homebrew and install it if missing
+if test ! $(which brew)
+then
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 # Check if zsh is present
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Install Oh My Zsh if it isn't already present
@@ -52,6 +59,6 @@ cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
 cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist" "~/Library/Preferences/" && defaults read com.apple.Terminal
 
 # Symlink dotfiles (check file named rcrc to see excluded symlinked files)
-. "rcup"
+env RCRC=$HOME/dotfiles/rcrc rcup
 
 echo "All done"

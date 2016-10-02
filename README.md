@@ -14,14 +14,34 @@ Clone onto your computer:
 (Or, [fork and keep your fork
 updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
 
-Install [rcm](https://github.com/thoughtbot/rcm):
+Install with
 
     cd dotfiles
     ./setup.sh
 
-Install the dotfiles:
+This will install the following items
 
-    env RCRC=$HOME/dotfiles/rcrc rcup
+	1) Homebrew
+	
+	2) Check for zsh and install if not available. 
+		If available, it will check for oh-my-zsh and install if not available.
+		
+	3) Run installers for various brew and cask brew apps
+	- install/brew.sh
+	- install/npm.sh
+	- install/brew-cask.sh (OSX only)
+	- install/gem.sh
+	- 
+	4) C66 toolbelt
+	
+	5) Powerline shell fonts
+	
+	6) Xcode theme
+	
+	7) Terminal (OSX) preferences
+	
+	8) Install the dotfiles
+	- env RCRC=$HOME/dotfiles/rcrc rcup
 
 After the initial installation, you can run `rcup` without the one-time variable
 `RCRC` being set (`rcup` will symlink the repo's `rcrc` to `~/.rcrc` for future
