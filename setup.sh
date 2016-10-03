@@ -47,10 +47,6 @@ fi
 # Install C66 toolbelt
 curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_install.sh | bash
 
-# Install fonts
-git clone https://github.com/rpassis/fonts.git && cd fonts && ./install.sh
-cd ../ && rm -rf fonts
-
 # Basic Xcode setup
 mkdir $XCODE_THEMES_DIR
 cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
