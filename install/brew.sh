@@ -27,8 +27,6 @@ apps=(
   tmux
   s3cmd
   mogenerator
-  node
-  npm
   rcm
   homebrew/completions/brew-cask-completion
   homebrew/dupes/grep
@@ -39,5 +37,10 @@ brew install "${apps[@]}"
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+nvm install stable
 
 echo "Brew installation tasks finished"
