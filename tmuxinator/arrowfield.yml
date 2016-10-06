@@ -1,9 +1,9 @@
 name: arrowfield
-root: ~/Documents/Freshmob/Clients/Arrowfield/Dev
+root: ~/Dev/Clients/Arrowfield
 
 windows:
   - api:
-      root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_server
+      root: ~/Dev/Clients/Arrowfield/bloodstock_server
       layout: main-horizontal
       panes:
         - docker-compose up -d && code .
@@ -11,7 +11,7 @@ windows:
         - tail -f log/development.log
         - cx ssh -s "Bloodstock AWS" -e dev Giraffe
   - ios:
-      root: ~/Documents/Freshmob/Clients/Arrowfield/Dev/bloodstock_ios
+      root: ~/Dev/Clients/Arrowfield/bloodstock_ios
       layout: main-horizontal
       panes:
         - #empty

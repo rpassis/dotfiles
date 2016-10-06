@@ -1,0 +1,16 @@
+name: celgene
+root: ~/Dev/Clients/Celgene/Dev
+
+windows:
+  - app:
+      root: ~/Dev/Clients/Celgene/Dev/celgene
+      layout: main-horizontal
+      panes:
+        - #
+        - #
+  - calc:
+      root: ~/Dev/Clients/Celgene/Dev/reclined-calc
+      layout: main-horizontal
+      panes:
+        - #empty
+        - #empty

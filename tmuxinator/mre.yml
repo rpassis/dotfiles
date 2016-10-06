@@ -1,7 +1,7 @@
 # ~/.tmuxinator/mre.yml
 
 name: mre
-root: ~/Dropbox/Freshmob/Clients/MyRealEstate/dev/mre
+root: ~/Dev/Clients/MyRealEstate/mre
 
 # Optional tmux socket
 # socket_name: foo
@@ -29,19 +29,19 @@ root: ~/Dropbox/Freshmob/Clients/MyRealEstate/dev/mre
 
 windows:
   - docker:
-      root: ~/Dropbox/Freshmob/Clients/MyRealEstate/dev/mre
+      root: ~/Dev/Clients/MyRealEstate/mre
       panes:
         - docker-compose up
         - sleep 5 && docker-compose exec db psql -U postgres
   - rails:
-      root: ~/Dropbox/Freshmob/Clients/MyRealEstate/dev/mre/rails-api
+      root: ~/Dev/Clients/MyRealEstate/mre/rails-api
       panes:
         - sleep 5 && docker-compose exec rails bash
         - sleep 5 && docker-compose exec rails rails c
         - tail -f log/development.log
         - #
   - web:
-      root: ~/Dropbox/Freshmob/Clients/MyRealEstate/dev/mre/web
+      root: ~/Dev/Clients/MyRealEstate/mre/web
       panes:
         - npm start
         - #
