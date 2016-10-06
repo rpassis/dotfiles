@@ -13,7 +13,6 @@ apps=(
     flux
     dash
     docker
-    iterm2
     atom-beta
     charles
     firefox
@@ -33,7 +32,6 @@ apps=(
     slack
     tower
     gitbox
-    transmit
     elmedia-player
     utorrent
     valentina-studio
