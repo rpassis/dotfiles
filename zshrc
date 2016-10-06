@@ -42,9 +42,6 @@ _load_settings "$HOME/.zsh/configs"
 # load direnv
 eval "$(direnv hook zsh)"
 
-# Hub aliased to git
-eval "$(hub alias -s)"
-
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
