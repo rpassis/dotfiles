@@ -6,6 +6,12 @@ DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
 XCODE_THEMES_DIR="~/Library/Developer/Xcode/UserData/FontAndColorThemes"
 RCRC=$HOME/dotfiles/rcrc
 RUBY_VERSION=2.3.1
+XCODE_VERSION="$(xcodebuild -version)"
+
+if ! [[ "$XCODE_VERSION" =~ "Xcode 8" ]]; then
+  echo "The latest version of brew needs Xcode 8 to work. Please install it and try running this script again."
+  exit 2
+fi
 
 # Check for Homebrew and install it if missing
 if test ! $(which brew)
