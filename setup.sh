@@ -54,7 +54,7 @@ fi
 curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_install.sh | bash
 
 # Basic Xcode setup
-mkdir $XCODE_THEMES_DIR
+mkdir -p $XCODE_THEMES_DIR
 cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme $XCODE_THEMES_DIR"
 
 # Terminal preferences
