@@ -8,6 +8,7 @@ sudo -v
 # Install rbenv ruby
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}
+rbenv local ${RUBY_VERSION}
 
 # Install essential gems
 gems=(
