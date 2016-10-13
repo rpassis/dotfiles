@@ -12,12 +12,12 @@ windows:
       root: ~/Dev/Clients/Gascoyne/gascoyne_server
       layout: main-horizontal
       panes:
-        - atom-beta .
+        - code .
         - sleep 5 && docker exec -it gascoyne_api rails console
         - tail -f log/development.log
   - ios:
-      root: ~/Dev/Clients/Gascoyne/gascoyne
+      root: ~/Dev/Clients/Gascoyne/gascoyne_ios
       layout: main-horizontal
       panes:
-        - #empty
+        - xc
         - #empty

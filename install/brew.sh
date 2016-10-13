@@ -31,6 +31,7 @@ apps=(
   homebrew/completions/brew-cask-completion
   homebrew/dupes/grep
   homebrew/dupes/openssh
+  reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 )
 
 brew install "${apps[@]}"
