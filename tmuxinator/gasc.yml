@@ -6,7 +6,7 @@ windows:
       root: ~/Dev/Clients/Gascoyne/gascoyne_server
       layout: main-horizontal
       panes:
-        - sleep 5 && docker exec -it gascoyne_db psql -U postgres
+        - #
         - docker-compose up
   - api:
       root: ~/Dev/Clients/Gascoyne/gascoyne_server
