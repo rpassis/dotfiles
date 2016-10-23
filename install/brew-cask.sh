@@ -30,7 +30,7 @@ apps=(
     sonos
     spotify
     slack
-    tower
+    sourcetree
     gitbox
     elmedia-player
     utorrent
