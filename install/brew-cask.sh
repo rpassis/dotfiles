@@ -19,7 +19,7 @@ apps=(
     firefoxnightly
     google-chrome
     google-chrome-canary
-    glimmerblocker
+    gitkraken
     hammerspoon
     kaleidoscope
     macdown
@@ -30,7 +30,6 @@ apps=(
     sonos
     spotify
     slack
-    sourcetree
     gitbox
     elmedia-player
     utorrent
