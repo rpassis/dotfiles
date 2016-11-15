@@ -2,11 +2,11 @@
 	"name": "code-runner",
 	"displayName": "Code Runner",
 	"description": "Run code snippet/file for JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, BAT/CMD, BASH/SH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal",
-	"version": "0.3.2",
+	"version": "0.4.1",
 	"publisher": "formulahendry",
 	"icon": "images/logo.png",
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.6.0"
 	},
 	"categories": [
 		"Languages",
@@ -147,6 +147,16 @@
 					"type": "boolean",
 					"default": true,
 					"description": "Whether to enable AppInsights to track user telemetry data."
+				},
+				"code-runner.showExecutionMessage": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show extra execution message like [Running] ... and [Done] ..."
+				},
+				"code-runner.runInTerminal": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to run code in Integrated Terminal"
 				}
 			}
 		},

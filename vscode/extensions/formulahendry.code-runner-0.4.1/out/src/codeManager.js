@@ -8,8 +8,12 @@ var TmpDir = os.tmpdir();
 var CodeManager = (function () {
     function CodeManager() {
         this._outputChannel = vscode.window.createOutputChannel('Code');
+        this._terminal = null;
         this._appInsightsClient = new appInsightsClient_1.AppInsightsClient();
     }
+    CodeManager.prototype.onDidCloseTerminal = function () {
+        this._terminal = null;
+    };
     CodeManager.prototype.run = function (languageId) {
         if (languageId === void 0) { languageId = null; }
         if (this._isRunning) {
@@ -34,7 +38,9 @@ var CodeManager = (function () {
     CodeManager.prototype.runByLanguage = function () {
         var _this = this;
         this._appInsightsClient.sendEvent('runByLanguage');
-        vscode.window.showInputBox({ prompt: "Enter language: e.g. php, javascript, bat, shellscript..." }).then(function (languageId) {
+        var config = vscode.workspace.getConfiguration('code-runner');
+        var executorMap = config.get('executorMap');
+        vscode.window.showQuickPick(Object.keys(executorMap), { placeHolder: "Type or select language to run" }).then(function (languageId) {
             if (languageId !== undefined) {
                 _this.run(languageId);
             }
@@ -141,16 +147,35 @@ var CodeManager = (function () {
         }
     };
     CodeManager.prototype.executeCommand = function (executor) {
+        if (this._config.get('runInTerminal') && !this._isTmpFile) {
+            this.executeCommandInTerminal(executor);
+        }
+        else {
+            this.executeCommandInOutputChannel(executor);
+        }
+    };
+    CodeManager.prototype.executeCommandInTerminal = function (executor) {
+        if (this._terminal === null) {
+            this._terminal = vscode.window.createTerminal('Code');
+        }
+        this._terminal.show();
+        var command = executor + ' \"' + this._codeFile + '\"';
+        this._terminal.sendText(command);
+    };
+    CodeManager.prototype.executeCommandInOutputChannel = function (executor) {
         var _this = this;
         this._isRunning = true;
         var clearPreviousOutput = this._config.get('clearPreviousOutput');
         if (clearPreviousOutput) {
             this._outputChannel.clear();
         }
+        var showExecutionMessage = this._config.get('showExecutionMessage');
         this._outputChannel.show();
         var exec = require('child_process').exec;
         var command = executor + ' \"' + this._codeFile + '\"';
-        this._outputChannel.appendLine('[Running] ' + command);
+        if (showExecutionMessage) {
+            this._outputChannel.appendLine('[Running] ' + command);
+        }
         this._appInsightsClient.sendEvent(executor);
         var startTime = new Date();
         this._process = exec(command, { cwd: this._cwd });
@@ -165,8 +190,10 @@ var CodeManager = (function () {
             var endTime = new Date();
             var elapsedTime = (endTime.getTime() - startTime.getTime()) / 1000;
             _this._outputChannel.appendLine('');
-            _this._outputChannel.appendLine('[Done] exited with code=' + code + ' in ' + elapsedTime + ' seconds');
-            _this._outputChannel.appendLine('');
+            if (showExecutionMessage) {
+                _this._outputChannel.appendLine('[Done] exited with code=' + code + ' in ' + elapsedTime + ' seconds');
+                _this._outputChannel.appendLine('');
+            }
             if (_this._isTmpFile) {
                 fs.unlink(_this._codeFile);
             }

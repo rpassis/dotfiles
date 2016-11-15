@@ -12,6 +12,7 @@ Run code snippet or code file for multiple languages: **JavaScript, PHP, Python,
 * View output in Output Window
 * Set default language to run
 * Select language to run
+* Support REPL by running code in Integrated Terminal
 
 ## Usages
 
@@ -20,7 +21,7 @@ Run code snippet or code file for multiple languages: **JavaScript, PHP, Python,
 
 ![Usage](https://raw.githubusercontent.com/formulahendry/vscode-code-runner/master/images/usage.gif)
 
-* To select language to run, use shortcut `Ctrl+Alt+J`, or press `F1` and then select/type `Run By Language`, then type the language: e.g `php, javascript, bat, shellscript...`
+* To select language to run, use shortcut `Ctrl+Alt+J`, or press `F1` and then select/type `Run By Language`, then type or select the language to run: e.g `php, javascript, bat, shellscript...`
 
 ![Usage](https://raw.githubusercontent.com/formulahendry/vscode-code-runner/master/images/usageRunByLanguage.gif)
 
@@ -80,6 +81,20 @@ To set whether to save the file before running (default is false):
 }
 ```
 
+To set whether to show extra execution message like [Running] ... and [Done] ... (default is true):
+```json
+{
+    "code-runner.showExecutionMessage": true
+}
+```
+
+**[REPL support]** To set whether to run code in Integrated Terminal (only support to run whole file in Integrated Terminal, neither untitled file nor code snippet) (default is false):
+```json
+{
+    "code-runner.runInTerminal": false
+}
+```
+
 ## About CWD Setting (current working directory)
 1. By default, use the `code-runner.cwd` setting
 2. If `code-runner.cwd` is not set and `code-runner.fileDirectoryAsCwd` is `ture`, use the directory of the file to be executed
@@ -99,6 +114,18 @@ By default, telemetry data collection is turned on to understand user behavior t
 ```
 
 ## Change Log
+### 0.4.1
+* Avoid running code in Integrated Terminal when it is untitled file or code snippet
+
+### 0.4.0
+* Add support to run code in Integrated Terminal
+
+### 0.3.4
+* Resolve [GitHub issue#24](https://github.com/formulahendry/vscode-code-runner/issues/24): Add config entry to set whether to Whether to show extra execution message
+
+### 0.3.3
+* Add support to run by language from a suggestion list
+
 ### 0.3.2
 * Add support for Swift, Julia, Crystal
 

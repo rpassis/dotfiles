@@ -10,10 +10,10 @@
 <h4 align="center">Debug your JavaScript code running in Google Chrome from VS Code.</h4>
 
 <p align="center">
-  <a href="https://travis-ci.com/Microsoft/vscode-chrome-debug"><img src="https://api.travis-ci.org/Microsoft/vscode-chrome-debug.svg?branch=master" alt="Travis"></a>
+  <a href="https://travis-ci.org/Microsoft/vscode-chrome-debug"><img src="https://api.travis-ci.org/Microsoft/vscode-chrome-debug.svg?branch=master" alt="Travis"></a>
   <a href="https://github.com/microsoft/vscode-chrome-debug/releases"><img src="https://img.shields.io/github/release/Microsoft/vscode-chrome-debug.svg" alt="Release"></a>
     <a href="https://gitter.im/Microsoft/vscode-chrome-debug?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Microsoft/vscode-chrome-debug.svg" alt="Release"></a>
-    
+
 </p>
 
 
@@ -40,7 +40,7 @@ To use this extension, you must first open the folder containing the project you
 
 When your launch config is set up, you can debug your project! Pick a launch config from the dropdown on the Debug pane in Code. Press the play button or F5 to start.
 
-### Configuration 
+### Configuration
 
 The extension operates in two modes - it can launch an instance of Chrome navigated to your app, or it can attach to a running instance of Chrome. Just like when using the Node debugger, you configure these modes with a `.vscode/launch.json` file in the root directory of your project. You can create this file manually, or Code will create one for you if you try to run your project, and it doesn't exist yet.
 
@@ -68,7 +68,7 @@ Two example `launch.json` configs. You must specify either `file` or `url` to la
 }
 ```
 
-If you want to use Chrome from a different directory, you can also set the "runtimeExecutable" field with a path to the Chrome app.
+If you want to use a different installation of Chrome, you can also set the "runtimeExecutable" field with a path to the Chrome app.
 
 ### Attach
 You must launch Chrome with remote debugging enabled in order for the extension to attach to it.
@@ -96,13 +96,15 @@ An example `launch.json` config.
             "type": "chrome",
             "request": "attach",
             "port": 9222,
-            "sourceMaps": true
+            "sourceMaps": true,
+            "url": "<url of the open browser tab, you wanna connect to"
         },
         {
             "name": "Attach to url with files served from ./out",
             "type": "chrome",
             "request": "attach",
             "port": 9222,
+            "url": "<url of the open browser tab, you wanna connect to",
             "webRoot": "${workspaceRoot}/out"
         }
     ]
@@ -141,16 +143,22 @@ Ionic and gulp-sourcemaps output a sourceRoot of `"/source/"` by default. If you
 ```
 
 ## Troubleshooting
-General things to try if you're having issues:
+
+### Cannot connect to the target: connect ECONNREFUSED 127.0.0.1:9222
+This message means that the extension can't attach to Chrome, because Chrome wasn't launched in debug mode. Here are some things to try:
+* If using a `launch` type config, close other running instances of Chrome - if Chrome is already running, the extension may not be able to attach, when using launch mode. Chrome can even stay running in the background when all its windows are closed, which will interfere - check the taskbar or kill the process if necessary. Or, set the `userDataDir` property to a temp directory. Chrome will read this and launch a new instance using a different profile than running instances. It can be convenient to set `"userDataDir": "${workspaceRoot}/.vscode/chrome"`.
+* If using an `attach` type config, ensure that you launched Chrome using `--remote-debugging-port=9222`. And if there was already a running instance, see the above.
+* Ensure that the `port` property matches the port on which Chrome is listening for remote debugging connections. This is `9222` by default. Ensure nothing else is using this port, including your web server. If something else on your computer responds at `http://localhost:9222`, then set a different port.
+* If all else fails, try to navigate to `http://localhost:<port>/json` in a browser when you see this message - if there is no response, then something is wrong upstream of the extension. If there is a page of JSON returned, then ensure that the `port` in the launch config matches the port in that url.
+
+### General things to try if you're having issues:
 * Ensure `webRoot` is set correctly if needed
 * Look at your sourcemap config carefully. A sourcemap has a path to the source files, and this extension uses that path to find the original source files on disk. Check the `sourceRoot` and `sources` properties in your sourcemap and make sure that they can be combined with the `webRoot` property in your launch config to build the correct path to the original source files.
 * This extension ignores sources that are inlined in the sourcemap - you may have a setup that works in Chrome Dev Tools, but not this extension, because the paths are incorrect, but Chrome Dev Tools are reading the inlined source content.
-* Close other running instances of Chrome - if Chrome is already running, the extension may not be able to attach, when using launch mode. Chrome can even stay running in the background when all its windows are closed, which will interfere - check the taskbar or kill the process if necessary.
-* Ensure nothing else is using port 9222, or specify a different port in your launch config
 * Check the console for warnings that this extension prints in some cases when it can't attach
 * Ensure the code in Chrome matches the code in Code. Chrome may cache an old version.
-* If you set a breakpoint in code that runs immediately when the page loads, you won't hit that breakpoint until you refresh the page.
-* File a bug in this extension's [GitHub repo](https://github.com/Microsoft/vscode-chrome-debug). Set the "diagnosticLogging" field in your launch config and attach the logs when filing a bug. You can drag this file into the GitHub comment box: `~/.vscode/extensions/msjsdiag.debugger-for-chrome/vscode-chrome-debug.txt`.
+* If your breakpoints bind, but aren't hit, try refreshing the page. If you set a breakpoint in code that runs immediately when the page loads, you won't hit that breakpoint until you refresh the page.
+* File a bug in this extension's [GitHub repo](https://github.com/Microsoft/vscode-chrome-debug). Set the "diagnosticLogging" field in your launch config and attach the logs when filing a bug. You can drag this file into the GitHub comment box: `~/.vscode/extensions/msjsdiag.debugger-for-chrome-<version>/vscode-chrome-debug.txt`.
 
 ===
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](https://github.com/Microsoft/vscode-chrome-debug/blob/master/mailto:opencode@microsoft.com) with any additional questions or comments.

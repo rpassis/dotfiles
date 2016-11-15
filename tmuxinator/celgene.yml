@@ -6,7 +6,7 @@ windows:
       root: ~/Dev/Clients/Celgene/celgene
       layout: main-horizontal
       panes:
-        - #
+        - xc
         - #
   - calc:
       root: ~/Dev/Clients/Celgene/reclined-calc

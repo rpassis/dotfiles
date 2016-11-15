@@ -6,13 +6,23 @@ windows:
       root: ~/Dev/Clients/Arrowfield/bloodstock_server
       layout: main-horizontal
       panes:
-        - docker-compose up -d && code .
-        - sleep 5 && docker-compose exec api bash
-        - tail -f log/development.log
-        - cx ssh -s "Bloodstock AWS" -e dev Giraffe
+        - docker:
+          - docker-compose up -d
+          - code .
+        - bash:
+          - sleep 5
+          - docker-compose exec api bash
+          - rails c
+        - logs:
+          - tail -f log/development.log
+        - remote:
+          - cx ssh -s "Bloodstock AWS" -e dev Giraffe
   - ios:
       root: ~/Dev/Clients/Arrowfield/bloodstock_ios
       layout: main-horizontal
       panes:
-        - #empty
-        - #empty
+        - xcode:
+          - xc
+          - git fetch --all
+        - shell:
+          - #

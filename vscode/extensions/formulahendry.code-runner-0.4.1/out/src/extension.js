@@ -4,6 +4,9 @@ var codeManager_1 = require('./codeManager');
 function activate(context) {
     console.log('Congratulations, your extension "code-runner" is now active!');
     var codeManager = new codeManager_1.CodeManager();
+    vscode.window.onDidCloseTerminal(function () {
+        codeManager.onDidCloseTerminal();
+    });
     var run = vscode.commands.registerCommand('code-runner.run', function () {
         codeManager.run();
     });
