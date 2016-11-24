@@ -166,6 +166,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Git
 # alias g=git
+alias gwipp=gwip && gp
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
