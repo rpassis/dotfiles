@@ -6,9 +6,10 @@ windows:
       root: ~/Dev/Clients/Arrowfield/bloodstock_server
       layout: main-horizontal
       panes:
-        - docker:
+        - docker:          
           - docker-compose up -d
           - code .
+          - git fetch --all
         - bash:
           - sleep 5
           - docker-compose exec api bash

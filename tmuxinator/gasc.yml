@@ -5,9 +5,8 @@ windows:
   - docker:
       root: ~/Dev/Clients/Gascoyne/gascoyne_server
       layout: main-horizontal
-      panes:
-        - #
-        - docker-compose up
+      panes:        
+        - docker-compose up -d
   - api:
       root: ~/Dev/Clients/Gascoyne/gascoyne_server
       layout: main-horizontal
