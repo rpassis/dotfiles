@@ -33,6 +33,7 @@ apps=(
   homebrew/dupes/openssh
   reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
   swiftlint
+  swiftgen
 )
 
 brew install "${apps[@]}"
