@@ -1,0 +1,11 @@
+name: refactor
+root: ~/Dev/Internal/refactor
+
+windows:
+  - dev:
+      root: ~/Dev/Internal/refactor
+      layout: main-horizontal
+      panes:        
+        - bundle exec guard
+        - git fetch --all
+        - irb
