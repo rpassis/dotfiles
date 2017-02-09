@@ -1,0 +1,23 @@
+name: mla
+root: ~/Dev/Clients/MLA
+
+windows:
+  - docker:
+      root: ~/Dev/Clients/MLA
+      layout: main-horizontal
+      panes:
+        - docker-compose up -d
+        - #
+  - api:
+      root: ~/Dev/Clients/MLA/www
+      layout: main-horizontal
+      panes:        
+        - #
+        - #
+  - ios:
+      root: ~/Dev/Clients/MLA/ios
+      layout: main-horizontal
+      panes:
+        - xc
+        - git fetch --all
+
