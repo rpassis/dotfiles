@@ -48,3 +48,21 @@ eval "$(direnv hook zsh)"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+  source '/Users/rppassis/google-cloud-sdk/path.zsh.inc'
+fi
+  source '/Users/rppassis/google-cloud-sdk/completion.zsh.inc'
+fi
+  source '/Users/rppassis/dotfiles/google-cloud-sdk/path.zsh.inc'
+fi
+  source '/Users/rppassis/dotfiles/google-cloud-sdk/completion.zsh.inc'
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/rppassis/.gcloud/path.zsh.inc ]; then
+  source '/Users/rppassis/.gcloud/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/rppassis/.gcloud/completion.zsh.inc ]; then
+  source '/Users/rppassis/.gcloud/completion.zsh.inc'
+fi
