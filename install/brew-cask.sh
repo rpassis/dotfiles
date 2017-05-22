@@ -17,11 +17,11 @@ apps=(
     charles
     firefox
     firefoxnightly
+    gitbox
     google-chrome
     google-chrome-canary
-    gitkraken
-    hammerspoon
     kaleidoscope
+    keepingyouawake
     macdown
     paw
     screenflow
