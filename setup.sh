@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd -P)"
 DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
 XCODE_THEMES_DIR="~/Library/Developer/Xcode/UserData/FontAndColorThemes"
 RCRC=$HOME/dotfiles/rcrc
-RUBY_VERSION=2.3.1
+RUBY_VERSION=2.4.1
 XCODE_VERSION="$(xcodebuild -version)"
 
 if ! [[ "$XCODE_VERSION" =~ "Xcode 8" ]]; then
