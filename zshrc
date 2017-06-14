@@ -45,6 +45,9 @@ eval "$(direnv hook zsh)"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/rppassis/.gcloud/path.zsh.inc ]; then
   source '/Users/rppassis/.gcloud/path.zsh.inc'
@@ -54,6 +57,3 @@ fi
 if [ -f /Users/rppassis/.gcloud/completion.zsh.inc ]; then
   source '/Users/rppassis/.gcloud/completion.zsh.inc'
 fi
-
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
