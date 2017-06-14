@@ -39,14 +39,9 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+<<<<<<< HEAD
 # load direnv
 eval "$(direnv hook zsh)"
-
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
-
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/rppassis/.gcloud/path.zsh.inc ]; then
@@ -57,3 +52,9 @@ fi
 if [ -f /Users/rppassis/.gcloud/completion.zsh.inc ]; then
   source '/Users/rppassis/.gcloud/completion.zsh.inc'
 fi
+
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
