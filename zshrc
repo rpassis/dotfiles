@@ -39,7 +39,6 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-<<<<<<< HEAD
 # load direnv
 eval "$(direnv hook zsh)"
 
