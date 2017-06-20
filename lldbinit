@@ -1,2 +1,2 @@
-command script import lldb/dslldb.py
+command script import ~/.lldb/dslldb.py
 

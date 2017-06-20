@@ -19,6 +19,7 @@ apps=(
     kaleidoscope
     keepingyouawake
     macdown
+    oclint
     paw
     screenflow
     simpholders
