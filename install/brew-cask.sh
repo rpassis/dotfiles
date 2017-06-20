@@ -10,16 +10,12 @@ brew tap caskroom/fonts
 # Install packages
 apps=(
     1password
-    flux
     dash
     docker
-    atom-beta
     charles
     firefox
-    firefoxnightly
     gitbox
     google-chrome
-    google-chrome-canary
     kaleidoscope
     keepingyouawake
     macdown
@@ -31,7 +27,6 @@ apps=(
     spotify
     slack
     gitbox
-    elmedia-player
     utorrent
     valentina-studio
     visual-studio-code

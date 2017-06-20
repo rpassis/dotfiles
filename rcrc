@@ -1,3 +1,3 @@
 EXCLUDES="README.md LICENSE setup.sh xcode install"
 DOTFILES_DIRS="$HOME/dotfiles-local $HOME/dotfiles"
-SYMLINK_DIRS="atom vscode"
+# SYMLINK_DIRS="atom" 
