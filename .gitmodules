@@ -1,0 +1,3 @@
+[submodule "lldb"]
+	path = lldb
+	url = https://github.com/DerekSelander/LLDB
