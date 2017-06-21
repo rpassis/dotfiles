@@ -27,3 +27,6 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[user]
+	name = Rogerio de Paula Assis
+	email = rogerio.assis@tinybeans.com

@@ -55,10 +55,10 @@ curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_inst
 
 # Basic Xcode setup
 mkdir -p $XCODE_THEMES_DIR
-cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme $XCODE_THEMES_DIR"
+cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
 
 # Terminal preferences
-cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist ~/Library/Preferences/" && defaults read com.apple.Terminal
+cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist" "~/Library/Preferences/" && defaults read com.apple.Terminal
 
 # Symlink dotfiles (check file named rcrc to see excluded symlinked files)
 echo "All done! Run `env RCRC=$HOME/dotfiles/rcrc rcup` to link your symfiles"

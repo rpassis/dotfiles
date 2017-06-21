@@ -22,6 +22,7 @@ apps=(
   hub
   direnv
   git
+  fasd
   rbenv
   carthage
   tmux

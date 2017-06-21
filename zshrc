@@ -42,6 +42,9 @@ _load_settings "$HOME/.zsh/configs"
 # load direnv
 eval "$(direnv hook zsh)"
 
+# load fasd
+eval "$(fasd --init auto)"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/rppassis/.gcloud/path.zsh.inc ]; then
   source '/Users/rppassis/.gcloud/path.zsh.inc'
