@@ -1,0 +1,35 @@
+name: tb
+root: ~/Dev/Tinybeans
+
+windows:
+  - web:
+      root: ~/Dev/Tinybeans/web
+      layout: main-horizontal
+      panes:
+        - docker:
+          - # docker-compose up -d
+          - code .
+          - git fetch --all
+        - shell:
+          - # sleep 5
+          - # docker-compose exec web bash
+        - logs:
+          - # tail -f log/development.log
+  - ios:
+      root: ~/Dev/Tinybeans/ios
+      layout: main-horizontal
+      panes:
+        - xcode:
+          - xc
+          - git fetch --all
+        - shell:
+          - #
+  - android:
+      root: ~/Dev/Tinybeans/android
+      layout: main-horizontal
+      panes:
+        - studio:
+          - git fetch --all
+          - #
+        - shell:
+          - #
