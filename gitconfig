@@ -13,20 +13,17 @@
   pf = push --force-with-lease
   st = status
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/rppassis/.gitignore
   autocrlf = input
   pager = "less -iXFR"
 	quotepath = false
 [merge]
   ff = only
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
   autosquash = true
 [include]
   path = ~/.gitconfig.local
-[user]
-	name = Rogerio de Paula Assis
-	email = rogerio.assis@tinybeans.com
