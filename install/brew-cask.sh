@@ -16,19 +16,13 @@ apps=(
     firefox
     gitbox
     google-chrome
-    kaleidoscope
-    keepingyouawake
-    macdown
-    oclint
+    kaleidoscope    
     paw
     screenflow
     simpholders
-    sketch
-    sonos
     spotify
     slack
     gitbox
-    utorrent
     valentina-studio
     visual-studio-code
 )
@@ -38,11 +32,8 @@ brew cask install "${apps[@]}"
 # Fonts
 fonts=(
     font-inconsolata
-    font-inconsolata-for-powerline
     font-meslo-lg
-    font-meslo-lg-for-powerline
     font-anonymous-pro
-    font-anonymous-pro-for-powerline
 )
 
 brew cask install "${fonts[@]}"

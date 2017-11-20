@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 # Get the dotfiles directory's absolute path
-SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd -P)"
-DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
-XCODE_THEMES_DIR="~/Library/Developer/Xcode/UserData/FontAndColorThemes"
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+XCODE_THEMES_DIR="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
 RCRC=$HOME/dotfiles/rcrc
 RUBY_VERSION=2.4.1
 XCODE_VERSION="$(xcodebuild -version)"
 
-if ! [[ "$XCODE_VERSION" =~ "Xcode 8" ]]; then
-  echo "The latest version of brew needs Xcode 8 to work. Please install it and try running this script again."
+if ! [[ "$XCODE_VERSION" =~ "Xcode 9" ]]; then
+  echo "The latest version of brew needs Xcode 9 to work. Please install it and try running this script again."
   exit 2
 fi
 
@@ -36,9 +35,6 @@ else
   exit
 fi
 
-export DOTFILES_DIR
-DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 # Package managers & packages
 
 . "$DOTFILES_DIR/install/brew.sh"
@@ -55,10 +51,10 @@ curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_inst
 
 # Basic Xcode setup
 mkdir -p $XCODE_THEMES_DIR
-cp "$DOTFILES_DIR/xcode/theme/One Dark.dvtcolortheme" "$XCODE_THEMES_DIR"
+cp $DOTFILES_DIR/xcode/theme/One\ Dark.dvtcolortheme $XCODE_THEMES_DIR
 
 # Terminal preferences
-cp "$DOTFILES_DIR/terminal/com.apple.Terminal.plist" "~/Library/Preferences/" && defaults read com.apple.Terminal
+cp $DOTFILES_DIR/terminal/com.apple.Terminal.plist $HOME/Library/Preferences/ && defaults read com.apple.Terminal
 
 # Symlink dotfiles (check file named rcrc to see excluded symlinked files)
-echo "All done! Run `env RCRC=$HOME/dotfiles/rcrc rcup` to link your symfiles"
+echo "All done! Run 'env RCRC=$HOME/dotfiles/rcrc rcup' to link your symfiles"
