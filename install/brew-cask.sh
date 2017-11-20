@@ -17,6 +17,7 @@ apps=(
     gitbox
     google-chrome
     kaleidoscope    
+    nosleep
     paw
     screenflow
     simpholders
