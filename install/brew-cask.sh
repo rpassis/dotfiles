@@ -24,7 +24,7 @@ apps=(
     spotify
     slack
     gitbox
-    valentina-studio
+    sequel-pro
     visual-studio-code
 )
 

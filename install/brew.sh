@@ -22,6 +22,7 @@ apps=(
   hub
   direnv
   git
+  git-flow-avh
   fasd
   rbenv
   carthage

@@ -7,11 +7,6 @@ RCRC=$HOME/dotfiles/rcrc
 RUBY_VERSION=2.4.1
 XCODE_VERSION="$(xcodebuild -version)"
 
-if ! [[ "$XCODE_VERSION" =~ "Xcode 9" ]]; then
-  echo "The latest version of brew needs Xcode 9 to work. Please install it and try running this script again."
-  exit 2
-fi
-
 # Check for Homebrew and install it if missing
 if test ! $(which brew)
 then
