@@ -13,17 +13,16 @@ apps=(
     dash
     docker
     charles
-    firefox
-    gitbox
+    firefox    
     google-chrome
     kaleidoscope    
     nosleep
-    paw
+    paw    
     screenflow
     simpholders
     spotify
     slack
-    gitbox
+    sourcetree
     sequel-pro
     visual-studio-code
 )
@@ -40,6 +39,19 @@ fonts=(
 brew cask install "${fonts[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-csv betterzipql qlimagesize suspicious-package provisioning
+quicklookPlugins=(
+    qlcolorcode
+    qlstephen
+    qlmarkdown
+    quicklook-json
+    quicklook-csv
+    betterzipql
+    qlimagesize
+    suspicious-package
+    provisionql
+)
+
+
+brew cask install "${quicklookPlugins[@]}"
 
 echo "Brew-cask installation tasks finished"
