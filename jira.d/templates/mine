@@ -1,0 +1,2 @@
+{{ range .issues }}{{ .key | append ":" }}{{ .fields.status.name | printf "%-12s" }} {{ .fields.summary }}
+{{ end }}
