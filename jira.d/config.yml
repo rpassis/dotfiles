@@ -1,6 +1,6 @@
 user: rogerio.assis@tinybeans.com
 endpoint: https://tinybeanskids.atlassian.net
-project: GROWTH
+project: GROW
 custom-commands:
   - name: mine
     help: display issues assigned to me
@@ -16,3 +16,17 @@ custom-commands:
           # otherwise list issues for all project
           echo "\"project: ...\" configuration missing from .jira.d/config.yml"
       fi
+  - name: ready
+    help: Moves a given issue to the Ready for QA column
+    args:
+      - name: ISSUE
+        required: true
+    script: |
+      {{jira}} transition --noedit "Ready for QA" {{args.ISSUE}}
+  - name: begin
+    help: Moves a given issue to the Dev in progress column
+    args:
+      - name: ISSUE
+        required: true
+    script: |
+      {{jira}} transition --noedit "Dev in progress" {{args.ISSUE}}
