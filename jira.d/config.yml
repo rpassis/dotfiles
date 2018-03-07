@@ -21,12 +21,18 @@ custom-commands:
     args:
       - name: ISSUE
         required: true
-    script: |
+    script: |-
       {{jira}} transition --noedit "Ready for QA" {{args.ISSUE}}
-  - name: begin
-    help: Moves a given issue to the Dev in progress column
+  - name: go
+    help: Creates a feature branch and moves a given issue to the Dev in progress column
+    options:
+      - name: type
+        default: feature
     args:
       - name: ISSUE
         required: true
-    script: |
+      - name: DESC
+        required: true
+    script: |-
+      git flow {{options.type}} start {{args.ISSUE}}_{{args.DESC}}
       {{jira}} transition --noedit "Dev in progress" {{args.ISSUE}}
