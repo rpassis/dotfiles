@@ -23,6 +23,7 @@ custom-commands:
         required: true
     script: |-
       {{jira}} transition --noedit "Ready for QA" {{args.ISSUE}}
+      {{jira}} assign {{args.ISSUE}} mohammed.sehhar
   - name: go
     help: Creates a feature branch and moves a given issue to the Dev in progress column
     options:
