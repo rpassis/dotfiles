@@ -18,24 +18,25 @@ brew upgrade --all
 
 apps=(
   awscli
-  nvm
-  hub
+  carthage
+  chisel
   direnv
+  fasd
   git
   git-flow-avh
-  fasd
-  rbenv
-  carthage
-  tmux
-  s3cmd
-  mogenerator
-  rcm
   homebrew/completions/brew-cask-completion
   homebrew/dupes/grep
   homebrew/dupes/openssh
+  hub
+  mogenerator
+  nvm
+  rbenv
+  rcm
   reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
-  swiftlint
+  s3cmd
   swiftgen
+  swiftlint
+  tmux
 )
 
 brew install "${apps[@]}"

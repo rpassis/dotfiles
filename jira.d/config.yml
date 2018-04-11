@@ -1,6 +1,7 @@
 user: rogerio.assis@tinybeans.com
 endpoint: https://tinybeanskids.atlassian.net
 project: GROW
+qa_user: mohammed.sehhar
 custom-commands:
   - name: mine
     help: display issues assigned to me
@@ -23,7 +24,7 @@ custom-commands:
         required: true
     script: |-
       {{jira}} transition --noedit "Ready for QA" {{args.ISSUE}}
-      {{jira}} assign {{args.ISSUE}} mohammed.sehhar
+      {{jira}} assign {{args.ISSUE}} $JIRA_QA_USER
   - name: go
     help: Creates a feature branch and moves a given issue to the Dev in progress column
     options:
@@ -37,3 +38,6 @@ custom-commands:
     script: |-
       git flow {{options.type}} start {{args.ISSUE}}_{{args.DESC}}
       {{jira}} transition --noedit "Dev in progress" {{args.ISSUE}}
+  - name: env
+    script: |
+      env | grep JIRA

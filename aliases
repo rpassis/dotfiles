@@ -168,7 +168,6 @@ alias path='echo $PATH | tr -s ":" "\n"'
 # Git
 # alias g=git
 alias gwipp='gwip && gp'
-unalias g
 
 # Lockscreen
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
