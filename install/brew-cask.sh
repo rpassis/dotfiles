@@ -13,11 +13,11 @@ apps=(
     dash
     docker
     charles
-    firefox    
+    firefox
     google-chrome
-    kaleidoscope    
+    kaleidoscope
     nosleep
-    paw    
+    paw
     screenflow
     simpholders
     spotify
@@ -34,6 +34,7 @@ fonts=(
     font-inconsolata
     font-meslo-lg
     font-anonymous-pro
+    font-fira-code
 )
 
 brew cask install "${fonts[@]}"
