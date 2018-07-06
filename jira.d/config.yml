@@ -37,7 +37,7 @@ custom-commands:
         required: true
     script: |-
       git flow {{options.type}} start {{args.ISSUE}}_{{args.DESC}}
-      {{jira}} transition --noedit "Dev in progress" {{args.ISSUE}}
+      {{jira}} transition --noedit "Started" {{args.ISSUE}}
   - name: env
     script: |
       env | grep JIRA
