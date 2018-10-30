@@ -37,6 +37,8 @@ apps=(
   swiftgen
   swiftlint
   tmux
+  zsh-autosuggestions
+  zsh-completions
 )
 
 brew install "${apps[@]}"

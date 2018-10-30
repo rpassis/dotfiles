@@ -60,3 +60,6 @@ fi
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Auto Suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

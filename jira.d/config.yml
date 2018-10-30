@@ -6,7 +6,7 @@ custom-commands:
   - name: mine
     help: display issues assigned to me
     script: |-
-      {{jira}} list --template mine --query "sprint in openSprints() and sprint not in futureSprints() and assignee=currentuser() ORDER BY created"
+      {{jira}} list --template mine --query "sprint in openSprints() or sprint in futureSprints() and assignee=currentuser() ORDER BY created"
   - name: sprint
     help: display issues for active sprint
     script: |-

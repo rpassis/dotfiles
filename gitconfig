@@ -33,3 +33,13 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[code]
+    editor = code --wait
+[merge]
+    tool = Kaleidoscope
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[diff]
+    tool = Kaleidoscope
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
