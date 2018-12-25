@@ -6,8 +6,8 @@ echo "Brew installation tasks starting"
 # Ask for the administrator password upfront
 sudo -v
 
-brew tap homebrew/versions
-brew tap homebrew/dupes
+# brew tap homebrew/versions
+# brew tap homebrew/dupes
 brew tap thoughtbot/formulae
 
 # Make sure we’re using the latest Homebrew
@@ -24,15 +24,11 @@ apps=(
   fasd
   git
   git-flow-avh
-  homebrew/completions/brew-cask-completion
-  homebrew/dupes/grep
-  homebrew/dupes/openssh
   hub
   mogenerator
   nvm
   rbenv
   rcm
-  reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
   s3cmd
   swiftgen
   swiftlint

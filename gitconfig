@@ -43,3 +43,6 @@
     tool = Kaleidoscope
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[user]
+	email = rogerio.assis@tinybeans.com
+	name = Rogerio de Paula Assis

@@ -10,17 +10,20 @@ brew tap caskroom/fonts
 # Install packages
 apps=(
     1password
+    android-studio
     dash
     docker
     charles
     firefox
     google-chrome
     kaleidoscope
+    kap
     nosleep
     paw
     screenflow
     simpholders
     spotify
+    sketch
     slack
     sourcetree
     sequel-pro
@@ -46,9 +49,6 @@ quicklookPlugins=(
     qlmarkdown
     quicklook-json
     quicklook-csv
-    betterzipql
-    qlimagesize
-    suspicious-package
     provisionql
 )
 
