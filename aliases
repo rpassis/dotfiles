@@ -150,6 +150,14 @@ alias reload="exec $SHELL -l"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Git
+# alias g=git
+alias gwipp='gwip && gp'
+
+# Git number
+alias gn='git number --column'
+alias gna='git number add'
+
 # Lockscreen
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
