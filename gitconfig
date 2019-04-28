@@ -13,7 +13,7 @@
   pf = push --force-with-lease
   st = status
 [core]
-	excludesfile = /Users/rppassis/.gitignore
+	excludesfile = /Users/rogerioassis/.gitignore_global
   autocrlf = input
   pager = "less -iXFR"
 	quotepath = false
@@ -27,22 +27,16 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [code]
     editor = code --wait
 [merge]
-    tool = Kaleidoscope
+	tool = vscode
 [mergetool "vscode"]
-    cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
 [diff]
-    tool = Kaleidoscope
+	tool = vscode
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
 [user]
-	email = rogerio.assis@tinybeans.com
+	email = rogerio@vimeo.com
 	name = Rogerio de Paula Assis

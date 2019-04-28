@@ -1,7 +1,8 @@
-user: rogerio.assis@tinybeans.com
-endpoint: https://tinybeanskids.atlassian.net
-project: GROW
-qa_user: mohammed.sehhar
+user: rogerio@vimeo.com
+password-source: keyring
+endpoint: https://vimean.atlassian.net
+project: VIM
+qa_user: rogerioassis
 custom-commands:
   - name: mine
     help: display issues assigned to me

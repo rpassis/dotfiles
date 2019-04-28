@@ -1,3 +1,7 @@
+#
+
+export ZSH_THEME="agnoster"
+
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -60,3 +64,6 @@ fi
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# zsh autocompletion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

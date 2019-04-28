@@ -51,5 +51,8 @@ cp $DOTFILES_DIR/xcode/theme/One\ Dark.dvtcolortheme $XCODE_THEMES_DIR
 # Terminal preferences
 cp $DOTFILES_DIR/terminal/com.apple.Terminal.plist $HOME/Library/Preferences/ && defaults read com.apple.Terminal
 
+# Zsh auto suggetions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 # Symlink dotfiles (check file named rcrc to see excluded symlinked files)
 echo "All done! Run 'env RCRC=$HOME/dotfiles/rcrc rcup' to link your symfiles"

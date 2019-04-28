@@ -151,7 +151,7 @@ alias reload="exec $SHELL -l"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Git
-# alias g=git
+alias gs=gss
 alias gwipp='gwip && gp'
 
 # Git number
