@@ -1,9 +1,9 @@
-name: arrowfield
-root: ~/Dev/Clients/Arrowfield
+name: templateName
+root: ~/Dev/Path/To/Root/Folder
 
 windows:
   - api:
-      root: ~/Dev/Clients/Arrowfield/bloodstock_server
+      root: ~/Dev/Path/To/Api/Folder
       layout: main-horizontal
       panes:
         - docker:          
@@ -17,9 +17,9 @@ windows:
         - logs:
           - tail -f log/development.log
         - remote:
-          - cx ssh -s "Bloodstock AWS" -e dev Giraffe
+          - ssh user@domain
   - ios:
-      root: ~/Dev/Clients/Arrowfield/bloodstock_ios
+      root: ~/Dev/Path/To/iOS/Folder
       layout: main-horizontal
       panes:
         - xcode:
