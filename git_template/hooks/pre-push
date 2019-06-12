@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-local_hook="$HOME"/.git_template.local/hooks/pre-push
+hook_name=`basename "$0"`
+project_folder=`git rev-parse --show-toplevel`
 
+local_hook="$project_folder"/.hooks/"$hook_name"
 if [ -f "$local_hook" ]; then
   . "$local_hook"
 fi

@@ -80,13 +80,13 @@ export EDITOR='code'
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/rppassis/.gcloud/path.zsh.inc ]; then
-  source '/Users/rppassis/.gcloud/path.zsh.inc'
+if [ -f ~/.gcloud/path.zsh.inc ]; then
+  source ~/.gcloud/path.zsh.inc
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f /Users/rppassis/.gcloud/completion.zsh.inc ]; then
-  source '/Users/rppassis/.gcloud/completion.zsh.inc'
+if [ -f ~/.gcloud/completion.zsh.inc ]; then
+  source ~/.gcloud/completion.zsh.inc
 fi
 
 # Local config
@@ -94,3 +94,7 @@ fi
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm

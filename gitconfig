@@ -17,6 +17,7 @@
   autocrlf = input
   pager = "less -iXFR"
 	quotepath = false
+	editor = code --wait
 [merge]
   ff = only
 [commit]
@@ -40,3 +41,5 @@
 [user]
 	email = rogerio@vimeo.com
 	name = Rogerio de Paula Assis
+[hub]
+	host = github.vimeows.com
