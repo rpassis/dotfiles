@@ -163,3 +163,7 @@ alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+# Cocoapods
+alias bepi='bundle exec pod install'
+alias bepu='bundle exec pod update --no-repo-update'

@@ -65,6 +65,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Remove the alias so it doesnt conflict with function
+# defined inside $HOME/.zsh/functions/g [RDPA 09/15/2019]
+unalias g
+
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -98,3 +102,10 @@ fi
 # nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
+# Go
+export GOPATH="$HOME/Dev/Labs/go"
+export GOBIN="/usr/local/go/bin"
+
+# Brew auto update
+export HOMEBREW_AUTO_UPDATE_SECS=60*60*24
