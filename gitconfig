@@ -3,7 +3,7 @@
 [push]
   default = current
 [color]
-  ui = auto
+	ui = true
 [alias]
   aa = add --all
   ap = add --patch
@@ -15,7 +15,7 @@
 [core]
 	excludesfile = /Users/rogerioassis/.gitignore_global
   autocrlf = input
-  pager = "less -iXFR"
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	quotepath = false
 	editor = code --wait
 [merge]
@@ -36,6 +36,7 @@
 	cmd = code --wait $MERGED
 [diff]
 	tool = vscode
+	algorithm = histogram
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [user]
@@ -44,10 +45,34 @@
 [hub]
 	host = github.vimeows.com
 [rerere]
-	enabled = true
+	enabled = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+	[diff]
+    tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

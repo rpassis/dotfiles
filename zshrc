@@ -109,3 +109,13 @@ export GOBIN="/usr/local/go/bin"
 
 # Brew auto update
 export HOMEBREW_AUTO_UPDATE_SECS=60*60*24
+
+# vimeo-dev-cli-autocomplete-start
+if [ -f '/Users/rogerioassis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh' ]; then
+    source /Users/rogerioassis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh
+fi
+# vimeo-dev-cli-autocomplete-end
+
+# vimeo-dev-alias-start
+alias dev=/Users/rogerioassis/Dev/Vimeo/Web/Main/dev
+# vimeo-dev-alias-end
