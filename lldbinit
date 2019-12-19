@@ -1,1 +1,11 @@
+# Load chisel
 command script import /usr/local/opt/chisel/libexec/fblldb.py
+
+# Custom aliases
+
+# Use Objective-C in swift context
+# i.e. eco [UIApplication shared]
+command alias eco expression -l objective-c -o --
+
+# Reveal LLDB commands support - DO NOT MODIFY
+command script import /Users/rogerioassis/Library/Application\ Support/Reveal/RevealServerCommands.py
