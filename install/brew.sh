@@ -20,6 +20,7 @@ apps=(
   awscli
   carthage
   chisel
+  diff-so-fancy
   direnv
   fasd
   git

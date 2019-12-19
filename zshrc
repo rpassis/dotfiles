@@ -41,7 +41,7 @@ eval "$(direnv hook zsh)"
 eval "$(fasd --init auto)"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rogerioassis/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="agnoster"

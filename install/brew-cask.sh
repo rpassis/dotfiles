@@ -3,9 +3,9 @@
 echo "Brew-cask installation tasks starting"
 
 # Install Caskroom
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 
 # Install packages
 apps=(
@@ -16,7 +16,6 @@ apps=(
     charles
     firefox
     google-chrome
-    kaleidoscope
     kap
     nosleep
     paw
@@ -34,10 +33,9 @@ brew cask install "${apps[@]}"
 
 # Fonts
 fonts=(
-    font-inconsolata
-    font-meslo-lg
-    font-anonymous-pro
-    font-fira-code
+    font-inconsolata-for-powerline
+    font-meslo-for-powerline
+    font-source-code-pro
 )
 
 brew cask install "${fonts[@]}"
@@ -51,7 +49,6 @@ quicklookPlugins=(
     quicklook-csv
     provisionql
 )
-
 
 brew cask install "${quicklookPlugins[@]}"
 
