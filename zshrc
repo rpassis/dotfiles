@@ -53,6 +53,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    git-auto-fetch
     xcode
     osx
     rbenv

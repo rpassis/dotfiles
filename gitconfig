@@ -40,7 +40,7 @@
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [user]
-	email = rogerio@vimeo.com
+	email = rogerio.assis@vimeo.com
 	name = Rogerio de Paula Assis
 [hub]
 	host = github.vimeows.com

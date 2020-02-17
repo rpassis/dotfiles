@@ -1,7 +1,7 @@
 user: rogerio@vimeo.com
 password-source: keyring
 endpoint: https://vimean.atlassian.net
-project: VIM
+project: MPS
 qa_user: rogerioassis
 custom-commands:
   - name: mine
