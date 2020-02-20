@@ -4,7 +4,7 @@
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 XCODE_THEMES_DIR="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
 RCRC=$HOME/dotfiles/rcrc
-RUBY_VERSION=2.4.1
+RUBY_VERSION=2.7.0
 XCODE_VERSION="$(xcodebuild -version)"
 
 # Check for Homebrew and install it if missing

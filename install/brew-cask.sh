@@ -10,6 +10,7 @@ brew tap homebrew/cask-fonts
 # Install packages
 apps=(
     1password
+    alfred
     android-studio
     dash
     docker
@@ -19,10 +20,8 @@ apps=(
     kap
     nosleep
     paw
-    screenflow
     simpholders
     spotify
-    sketch
     slack
     sourcetree
     sequel-pro

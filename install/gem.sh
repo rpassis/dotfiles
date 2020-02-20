@@ -14,7 +14,7 @@ rbenv local ${RUBY_VERSION}
 gems=(
   cocoapods
   fastlane
-  tmuxinator
+  xcode-install
 )
 
 gem install "${gems[@]}"

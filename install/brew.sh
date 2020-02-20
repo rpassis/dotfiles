@@ -13,20 +13,15 @@ brew tap thoughtbot/formulae
 # Make sure we’re using the latest Homebrew
 brew update
 
-# Upgrade any already-installed formulae
-brew upgrade --all
-
 apps=(
   awscli
   carthage
-  chisel
   diff-so-fancy
   direnv
   fasd
   git
   git-flow-avh
   hub
-  mogenerator
   nvm
   rbenv
   rcm
