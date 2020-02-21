@@ -22,6 +22,7 @@ apps=(
   git
   git-flow-avh
   hub
+  mas
   nvm
   rbenv
   rcm
