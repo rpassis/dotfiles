@@ -18,7 +18,6 @@ apps=(
     firefox
     google-chrome
     kap
-    nosleep
     paw
     simpholders
     spotify
