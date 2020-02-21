@@ -84,16 +84,6 @@ export EDITOR='code'
 # zsh autocompletion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f ~/.gcloud/path.zsh.inc ]; then
-  source ~/.gcloud/path.zsh.inc
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f ~/.gcloud/completion.zsh.inc ]; then
-  source ~/.gcloud/completion.zsh.inc
-fi
-
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
@@ -112,11 +102,17 @@ export GOBIN="/usr/local/go/bin"
 export HOMEBREW_AUTO_UPDATE_SECS=60*60*24
 
 # vimeo-dev-cli-autocomplete-start
-if [ -f '/Users/rogerioassis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh' ]; then
-    source /Users/rogerioassis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh
+if [ -f "$HOME/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh" ]; then
+    source $HOME/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh
 fi
 # vimeo-dev-cli-autocomplete-end
 
 # vimeo-dev-alias-start
-alias dev=/Users/rogerioassis/Dev/Vimeo/Web/Main/dev
+alias dev=$HOME/Dev/Vimeo/Web/Main/dev
 # vimeo-dev-alias-end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/.google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/.google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/.google-cloud-sdk/completion.zsh.inc"; fi
