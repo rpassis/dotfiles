@@ -31,14 +31,9 @@ else
 fi
 
 # Package managers & packages
+brew bundle
 
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/npm.sh"
-
-if [ "$(uname)" == "Darwin" ]; then
-    . "$DOTFILES_DIR/install/brew-cask.sh"
-fi
-
+# Gems
 . "$DOTFILES_DIR/install/gem.sh"
 
 # Install C66 toolbelt
