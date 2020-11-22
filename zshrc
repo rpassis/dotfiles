@@ -102,13 +102,13 @@ export GOBIN="/usr/local/go/bin"
 export HOMEBREW_AUTO_UPDATE_SECS=60*60*24
 
 # vimeo-dev-cli-autocomplete-start
-if [ -f "$HOME/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh" ]; then
-    source $HOME/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh
+if [ -f '/Users/rogerio.assis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh' ]; then
+    source /Users/rogerio.assis/Dev/Vimeo/Web/Main/scripts/devex/DevCli/dev-cli-completer-zsh
 fi
 # vimeo-dev-cli-autocomplete-end
 
 # vimeo-dev-alias-start
-alias dev=$HOME/Dev/Vimeo/Web/Main/dev
+alias dev=/Users/rogerio.assis/Dev/Vimeo/Web/Main/dev
 # vimeo-dev-alias-end
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -116,3 +116,6 @@ if [ -f "$HOME/.google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/.google-cloud-sd
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/.google-cloud-sdk/completion.zsh.inc"; fi
+
+# dex completion
+# eval "$(dex completion --zsh-completion)"

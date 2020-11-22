@@ -167,3 +167,6 @@ alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/
 # Cocoapods
 alias bepi='bundle exec pod install'
 alias bepu='bundle exec pod update --no-repo-update'
+
+# Kill notification center (Big Sur close notification bug)
+alias killnc='ps aux | grep NotificationCenter.app | awk '\''{ print $2 }'\'' | xargs kill -9'

@@ -1,5 +1,5 @@
 # Load chisel
-command script import /usr/local/opt/chisel/libexec/fblldb.py
+# command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 # Custom aliases
 
@@ -7,5 +7,6 @@ command script import /usr/local/opt/chisel/libexec/fblldb.py
 # i.e. eco [UIApplication shared]
 command alias eco expression -l objective-c -o --
 
-# Reveal LLDB commands support - DO NOT MODIFY
-command script import /Users/rogerioassis/Library/Application\ Support/Reveal/RevealServerCommands.py
+### Reveal LLDB commands support - DO NOT MODIFY
+command script import /Users/rogerio.assis/Library/Application\ Support/Reveal/RevealServerCommands.py
+###
